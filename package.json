@@ -1,0 +1,15 @@
+{
+  "name": "linkedin-scraper",
+  "version": "1.0.0",
+  "description": "A scraper for LinkedIn, give us a linkedin profile URL and we'll give you a nice data structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaditya Sriram <aaditya@aadityasriram.com> (http://aadityasriram.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "jsdom": "^3.1.0"
+  }
+}
