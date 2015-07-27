@@ -1,5 +1,5 @@
-function Experience(position, companyName, dates, locality, description) {
-    this.position = position;
+function Experience(title, companyName, dates, locality, description) {
+    this.title = title;
     this.companyName = companyName;
     this.dates = (function (dates) {
         var dd = (~dates.indexOf('(') ? dates.substring(0, dates.indexOf('(')) : dates).split('–'),
