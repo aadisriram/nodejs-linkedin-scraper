@@ -13,6 +13,8 @@ function getProfile(linkedInURL, callback) {
         done: function (errors, window) {
             var $ = window.$;
             var profile = new ProfileClass();
+
+            profile.publicProfileUrl = linkedInURL;
             profile.name = $("#name h1 span span").text();
             profile.pictureUrl = $(".profile-picture img").attr("src");
             profile.headline = $("#headline p").text();
