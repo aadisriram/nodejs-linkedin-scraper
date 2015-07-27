@@ -4,7 +4,7 @@ function Experience(title, companyName, dates, locality, description) {
     this.dates = (function (dates) {
         var dd = (~dates.indexOf('(') ? dates.substring(0, dates.indexOf('(')) : dates).split('–'),
             current = dd[1] && ~dd[1].indexOf('Present') ? true : false;
-        console.log('>>>', dates,  dd);
+
         return {
             start: dd[0] ? new Date(dd[0]).toJSON() : undefined,
             end: dd[1] && !current ? new Date(dd[1]).toJSON() : undefined,
