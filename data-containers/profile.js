@@ -4,7 +4,7 @@ function LinkedInProfile() {
     this.pictureUrl;
     this.headline;
     this.location;
-    this.sumary;
+    this.summary;
     this.current;
     this.past = [];
     this.education;

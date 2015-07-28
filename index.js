@@ -19,7 +19,7 @@ function getProfile(linkedInURL, callback) {
             profile.pictureUrl = $(".profile-picture img").attr("src");
             profile.headline = $("#headline p").text();
             profile.location = $("#location dl dd span").text();
-            profile.sumary = $(".summary .description").text();
+            profile.summary = $(".summary .description").text();
             profile.current = $("#overview-summary-current td ol li a").text();
             $("#overview-summary-past td ol li").each(function () {
                 var company = $(this).text();
