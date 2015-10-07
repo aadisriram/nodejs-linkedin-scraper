@@ -58,9 +58,9 @@ function getProfile(linkedInURL, callback) {
             $("#background-education div div div").each(function () {
                 profile.educations.push(new Education($(this).find("header h4").text(),
                     $(this).find("header h4 a[href]").attr("href"),
-                    $(this).find("header h5 span:first").text(),
-                    $(this).find("header h5 span:eq(2)").text(),
-                    $(this).find("header h5 span:last").text(),
+                    $(this).find("header h5 span.degree").text(),
+                    $(this).find("header h5 span.major").text(),
+                    $(this).find("header h5 span.grade").text(),
                     $(this).find("> span").text()
                 ));
             });

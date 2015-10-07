@@ -20,4 +20,4 @@ linkedinScraper(url,
 
 <h1> Sample Output </h1>
 
-http://pastebin.com/jipY0hzj
+http://pastebin.com/qNZGfA1W
