@@ -11,6 +11,7 @@ function getProfile(linkedInURL, callback) {
         url: linkedInURL,
         scripts: ["http://code.jquery.com/jquery.js"],
         done: function (errors, window) {
+
             var $ = window.$;
             var profile = new ProfileClass();
 
@@ -33,7 +34,7 @@ function getProfile(linkedInURL, callback) {
             });
             $("#background-experience div div").each(function () {
                 profile.positions.push(new Experience($(this).find("header h4").text(),
-                    $(this).find("header a").text(),
+                    $(this).find("header h5 a").text(),
                     $(this).find(".experience-date-locale").clone().find(".locality").remove().end().text(),
                     $(this).find("span span.locality").text(),
                     $(this).find("p").html()
