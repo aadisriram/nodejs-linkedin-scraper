@@ -11,7 +11,6 @@ function getProfile(linkedInURL, callback) {
         url: linkedInURL,
         scripts: ["http://code.jquery.com/jquery.js"],
         done: function (errors, window) {
-
             var $ = window.$;
             var profile = new ProfileClass();
 
