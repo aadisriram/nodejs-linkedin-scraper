@@ -1,3 +1,5 @@
+# DEPRECATED - see [linkedin-scraper2](https://github.com/danieljoppi/node-linkedin-scraper2)
+
 # nodejs-linkedin-scraper
 A simple linkedin profile scraper for nodejs
 
