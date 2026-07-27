@@ -1,0 +1,21 @@
+{
+  "name": "Guido van Rossum",
+  "headlineIncludes": "Microsoft",
+  "minPositions": 0,
+  "minEducations": 0,
+  "hasSummary": false,
+  "hasSkills": false,
+  "hasProjects": true,
+  "hasHonors": false,
+  "hasVolunteering": true,
+  "sectionsInclude": [
+    "educationsDetails",
+    "projects",
+    "volunteering"
+  ],
+  "positionCount": 0,
+  "educationCount": 0,
+  "skillCount": 0,
+  "projectCount": 3,
+  "honorCount": 0
+}
