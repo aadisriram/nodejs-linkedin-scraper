@@ -1,0 +1,25 @@
+{
+  "name": "Reid Hoffman",
+  "headlineIncludes": "Co-Founder, ",
+  "minPositions": 1,
+  "minEducations": 1,
+  "hasSummary": true,
+  "hasSkills": true,
+  "hasProjects": false,
+  "hasHonors": true,
+  "hasVolunteering": true,
+  "sectionsInclude": [
+    "educations",
+    "educationsDetails",
+    "experience",
+    "honors-and-awards",
+    "skills",
+    "summary",
+    "volunteering"
+  ],
+  "positionCount": 13,
+  "educationCount": 6,
+  "skillCount": 47,
+  "projectCount": 0,
+  "honorCount": 9
+}

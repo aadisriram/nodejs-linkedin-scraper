@@ -1,0 +1,21 @@
+{
+  "name": "Jeff Weiner",
+  "headlineIncludes": "Founding Par",
+  "minPositions": 1,
+  "minEducations": 0,
+  "hasSummary": true,
+  "hasSkills": true,
+  "hasProjects": false,
+  "hasHonors": false,
+  "hasVolunteering": false,
+  "sectionsInclude": [
+    "experience",
+    "skills",
+    "summary"
+  ],
+  "positionCount": 11,
+  "educationCount": 0,
+  "skillCount": 26,
+  "projectCount": 0,
+  "honorCount": 0
+}
