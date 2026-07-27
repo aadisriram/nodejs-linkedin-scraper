@@ -12,8 +12,8 @@
     }
   },
   "bin": {
-    "linkedin-scraper": "./dist/cli.js",
-    "linkedin-scraper-mcp": "./dist/mcp/server.js"
+    "linkedin-scraper": "dist/cli.js",
+    "linkedin-scraper-mcp": "dist/mcp/server.js"
   },
   "files": [
     "dist",
