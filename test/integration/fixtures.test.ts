@@ -36,6 +36,14 @@ describe("fixture integration", () => {
         skillCount: number;
         projectCount: number;
         honorCount: number;
+        positions?: Array<{
+          title?: string;
+          companyName?: string;
+          locality?: string;
+          start?: string;
+          end?: string;
+          current?: boolean;
+        }>;
       };
 
       const profile = scrapeProfileFromHtml(html, url);
@@ -57,6 +65,25 @@ describe("fixture integration", () => {
         expect(profile.sectionsPresent).toContain(section);
       }
       expect(profile.publicProfileUrl).toBe(url);
+      expect(profile.schemaVersion).toBe(1);
+      if (expected.positionCount > 0) {
+        expect(profile.parseReport.positions).toEqual({
+          status: "parsed",
+          count: expected.positionCount,
+        });
+      }
+      if (expected.positions) {
+        expect(profile.positions).toHaveLength(expected.positions.length);
+        expected.positions.forEach((want, index) => {
+          const got = profile.positions[index];
+          expect(got?.title).toBe(want.title);
+          expect(got?.companyName).toBe(want.companyName);
+          expect(got?.locality).toBe(want.locality);
+          expect(got?.dates?.start).toBe(want.start);
+          expect(got?.dates?.end).toBe(want.end);
+          expect(got?.dates?.current).toBe(want.current);
+        });
+      }
     });
   }
 });

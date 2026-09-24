@@ -69,7 +69,34 @@ export interface Recommendation {
   recommenderTitle?: string;
 }
 
+/** Integer bumped when the JSON field contract changes. */
+export const SCHEMA_VERSION = 1;
+
+export type SectionParseStatus = "absent" | "empty" | "parsed";
+
+export interface SectionParseReport {
+  status: SectionParseStatus;
+  /** Item count. `0` when status is `absent` or `empty`. Summary uses `1` when text is present. */
+  count: number;
+}
+
+export type ParseReportKey =
+  | "summary"
+  | "positions"
+  | "educations"
+  | "skills"
+  | "projects"
+  | "honors"
+  | "languages"
+  | "volunteering"
+  | "publications"
+  | "recommendations"
+  | "websites";
+
+export type ParseReport = Record<ParseReportKey, SectionParseReport>;
+
 export interface LinkedInProfile {
+  schemaVersion: number;
   publicProfileUrl: string;
   name?: string;
   headline?: string;
@@ -88,6 +115,8 @@ export interface LinkedInProfile {
   websites: string[];
   /** data-section attribute values found on the public page */
   sectionsPresent: string[];
+  /** Per-section parser outcome. `empty` means the section was in the HTML and no items were parsed. */
+  parseReport: ParseReport;
 }
 
 export interface ScrapeOptions {

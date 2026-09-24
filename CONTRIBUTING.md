@@ -20,6 +20,8 @@ curl -sL -A "$UA" -H 'Accept-Language: en-US,en;q=0.9' \
 # Re-run parsers and update the matching *.expected.json golden file
 ```
 
+If parsing warns that a known section is present and the item count is 0, check the selectors before updating the golden file. An empty count is expected only when that section's HTML has no cards.
+
 Do not commit auth cookies or personal session HTML.
 
 ## Live tests

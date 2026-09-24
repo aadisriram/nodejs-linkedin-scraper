@@ -1,7 +1,7 @@
 {
   "name": "linkedin-scraper",
   "version": "2.0.0",
-  "description": "Scrape public LinkedIn profiles into structured JSON (TypeScript, Cheerio, optional MCP server)",
+  "description": "Parse public LinkedIn profile HTML into structured JSON (ESM, Node 20+). Live fetch is optional and fails closed.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,6 +9,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp/server.d.ts",
+      "import": "./dist/mcp/server.js"
     }
   },
   "bin": {
@@ -53,9 +57,11 @@
   },
   "homepage": "https://github.com/aadisriram/nodejs-linkedin-scraper#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0",
     "cheerio": "^1.2.0",
-    "undici": "^6.21.3",
+    "undici": "^6.21.3"
+  },
+  "optionalDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

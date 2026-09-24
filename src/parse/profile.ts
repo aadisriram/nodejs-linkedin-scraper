@@ -1,9 +1,10 @@
 import * as cheerio from "cheerio";
+import { assertNotChallengePage } from "../challenge.js";
 import { AuthChallengeError, ParseError, ProfileNotFoundError } from "../errors.js";
-import { assertNotChallengePage } from "../fetch.js";
-import type { LinkedInProfile } from "../types.js";
+import { SCHEMA_VERSION, type LinkedInProfile } from "../types.js";
 import { parseEducations } from "./education.js";
 import { parsePositions } from "./experience.js";
+import { buildParseReport } from "./report.js";
 import {
   parseHonors,
   parseLanguages,
@@ -51,24 +52,50 @@ export function scrapeProfileFromHtml(
       throw new AuthChallengeError();
     }
 
+    const summary = parseSummary($);
+    const positions = parsePositions($);
+    const educations = parseEducations($);
+    const skills = parseSkills($);
+    const projects = parseProjects($);
+    const honors = parseHonors($);
+    const languages = parseLanguages($);
+    const volunteering = parseVolunteering($);
+    const publications = parsePublications($);
+    const recommendations = parseRecommendations($);
+    const websites = parseWebsites($);
+
     return {
+      schemaVersion: SCHEMA_VERSION,
       publicProfileUrl,
       name: top.name,
       headline: top.headline,
       location: top.location,
       pictureUrl: top.pictureUrl,
-      summary: parseSummary($),
-      positions: parsePositions($),
-      educations: parseEducations($),
-      skills: parseSkills($),
-      projects: parseProjects($),
-      honors: parseHonors($),
-      languages: parseLanguages($),
-      volunteering: parseVolunteering($),
-      publications: parsePublications($),
-      recommendations: parseRecommendations($),
-      websites: parseWebsites($),
+      summary,
+      positions,
+      educations,
+      skills,
+      projects,
+      honors,
+      languages,
+      volunteering,
+      publications,
+      recommendations,
+      websites,
       sectionsPresent,
+      parseReport: buildParseReport(sectionsPresent, {
+        summary: summary ? 1 : 0,
+        positions: positions.length,
+        educations: educations.length,
+        skills: skills.length,
+        projects: projects.length,
+        honors: honors.length,
+        languages: languages.length,
+        volunteering: volunteering.length,
+        publications: publications.length,
+        recommendations: recommendations.length,
+        websites: websites.length,
+      }),
     };
   } catch (err) {
     if (

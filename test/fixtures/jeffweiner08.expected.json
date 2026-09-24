@@ -13,9 +13,169 @@
     "skills",
     "summary"
   ],
-  "positionCount": 11,
+  "positionCount": 24,
   "educationCount": 0,
   "skillCount": 26,
   "projectCount": 0,
-  "honorCount": 0
+  "honorCount": 0,
+  "positions": [
+    {
+      "title": "Founding Partner",
+      "companyName": "Next Play Ventures",
+      "locality": "San Francisco Bay Area",
+      "start": "2020-07",
+      "current": true
+    },
+    {
+      "title": "Investor/Advisor",
+      "companyName": "Next Play Ventures",
+      "locality": "San Francisco Bay Area",
+      "start": "2008-09",
+      "end": "2020-06"
+    },
+    {
+      "title": "Founding LP, Investment Committee",
+      "companyName": "Westbound Equity Partners",
+      "locality": "San Francisco Bay Area",
+      "start": "2019-10",
+      "current": true
+    },
+    {
+      "title": "Co-Founder",
+      "companyName": "The Compassion Project",
+      "start": "2017-09",
+      "current": true
+    },
+    {
+      "title": "Member, Advisory Board",
+      "companyName": "Boys & Girls Clubs of the Peninsula",
+      "locality": "San Francisco Bay Area",
+      "start": "2011",
+      "current": true
+    },
+    {
+      "title": "Executive Chairman",
+      "companyName": "LinkedIn",
+      "start": "2020-07",
+      "end": "2026-04"
+    },
+    {
+      "title": "CEO",
+      "companyName": "LinkedIn",
+      "start": "2008-12",
+      "end": "2020-06"
+    },
+    {
+      "title": "Member, Board of Directors",
+      "companyName": "DonorsChoose",
+      "start": "2007",
+      "end": "2024-10"
+    },
+    {
+      "title": "Member, Board of Directors",
+      "companyName": "Intuit",
+      "locality": "Mountain View, CA",
+      "start": "2012-04",
+      "end": "2023-01"
+    },
+    {
+      "title": "Member Board Of Directors",
+      "companyName": "EVERFI",
+      "locality": "Washington D.C. Metro Area",
+      "start": "2017-09",
+      "end": "2021-12"
+    },
+    {
+      "title": "Member, Advisory Board",
+      "companyName": "Venture For America",
+      "locality": "Greater New York City Area",
+      "start": "2012",
+      "end": "2021-06"
+    },
+    {
+      "title": "Member, Board of Directors",
+      "companyName": "Malaria No More",
+      "start": "2007",
+      "end": "2015-12"
+    },
+    {
+      "title": "Executive in Residence",
+      "companyName": "Accel Partners",
+      "start": "2008-09",
+      "end": "2009-06"
+    },
+    {
+      "title": "Executive in Residence",
+      "companyName": "Greylock",
+      "start": "2008-09",
+      "end": "2009-06"
+    },
+    {
+      "title": "Executive Vice President Network Division",
+      "companyName": "Yahoo!",
+      "start": "2007-02",
+      "end": "2008-06"
+    },
+    {
+      "title": "Senior Vice President, Search and Marketplace",
+      "companyName": "Yahoo",
+      "locality": "Sunnyvale, CA",
+      "start": "2002-09",
+      "end": "2007-02"
+    },
+    {
+      "title": "Senior Vice President Corporate Development",
+      "companyName": "Yahoo",
+      "locality": "Sunnyvale, CA",
+      "start": "2001-05",
+      "end": "2002-09"
+    },
+    {
+      "title": "Founding Partner",
+      "companyName": "Windsor Media",
+      "start": "2000-06",
+      "end": "2001-04"
+    },
+    {
+      "title": "Vice President Online",
+      "companyName": "Warner Bros. Studios",
+      "start": "1998-09",
+      "end": "2000-03"
+    },
+    {
+      "title": "Director, Online",
+      "companyName": "Warner Bros. Studios",
+      "locality": "Burbank, CA",
+      "start": "1997-04",
+      "end": "1998-09"
+    },
+    {
+      "title": "Manager, Online",
+      "companyName": "Warner Bros. Studios",
+      "locality": "Burbank, CA",
+      "start": "1996-04",
+      "end": "1997-04"
+    },
+    {
+      "title": "Senior Analyst, Corporate Development",
+      "companyName": "Warner Bros. Studios",
+      "locality": "Burbank, CA",
+      "start": "1994-09",
+      "end": "1996-04"
+    },
+    {
+      "title": "Senior Analyst",
+      "companyName": "Braxton Associates",
+      "locality": "Boston",
+      "start": "1993-09",
+      "end": "1994-09"
+    },
+    {
+      "title": "Analyst",
+      "companyName": "Braxton Associates",
+      "locality": "Boston, MA",
+      "start": "1992-09",
+      "end": "1993-09"
+    }
+  ]
 }
