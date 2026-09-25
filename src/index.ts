@@ -9,22 +9,30 @@ export type {
   Honor,
   Language,
   LinkedInProfile,
+  ParseReport,
+  ParseReportKey,
   Position,
   Project,
   Publication,
   Recommendation,
   ScrapeOptions,
+  SectionParseReport,
+  SectionParseStatus,
   Volunteering,
 } from "./types.js";
 
+export { SCHEMA_VERSION } from "./types.js";
+
 export {
   AuthChallengeError,
+  EXIT_CODES,
   FetchError,
   InvalidProfileUrlError,
   LinkedInScraperError,
   ParseError,
   ProfileNotFoundError,
   RateLimitedError,
+  exitCodeForError,
 } from "./errors.js";
 
 export { normalizeProfileUrl, isLinkedInProfileUrl } from "./url.js";

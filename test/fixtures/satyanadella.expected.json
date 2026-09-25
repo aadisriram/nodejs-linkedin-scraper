@@ -18,5 +18,38 @@
   "educationCount": 3,
   "skillCount": 0,
   "projectCount": 0,
-  "honorCount": 0
+  "honorCount": 0,
+  "positions": [
+    {
+      "title": "Chairman and CEO",
+      "companyName": "Microsoft",
+      "locality": "Greater Seattle Area",
+      "start": "2014-02",
+      "current": true
+    },
+    {
+      "title": "Member Board Of Trustees",
+      "companyName": "University of Chicago",
+      "start": "2018",
+      "current": true
+    },
+    {
+      "title": "Board Member",
+      "companyName": "Starbucks",
+      "start": "2017",
+      "end": "2024"
+    },
+    {
+      "title": "Chairman",
+      "companyName": "The Business Council U.S.",
+      "start": "2021",
+      "end": "2023"
+    },
+    {
+      "title": "Board Member",
+      "companyName": "Fred Hutch",
+      "start": "2016",
+      "end": "2022"
+    }
+  ]
 }

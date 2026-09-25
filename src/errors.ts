@@ -52,6 +52,34 @@ export class ParseError extends LinkedInScraperError {
   }
 }
 
+/** Process exit codes for the CLI. `0` is success. `1` is usage or an unknown failure. */
+export const EXIT_CODES = {
+  OK: 0,
+  USAGE: 1,
+  INVALID_URL: 2,
+  NOT_FOUND: 3,
+  RATE_LIMITED: 4,
+  AUTH_CHALLENGE: 5,
+  FETCH_ERROR: 6,
+  PARSE_ERROR: 7,
+} as const;
+
+const EXIT_CODE_BY_ERROR: Record<string, number> = {
+  INVALID_URL: EXIT_CODES.INVALID_URL,
+  NOT_FOUND: EXIT_CODES.NOT_FOUND,
+  RATE_LIMITED: EXIT_CODES.RATE_LIMITED,
+  AUTH_CHALLENGE: EXIT_CODES.AUTH_CHALLENGE,
+  FETCH_ERROR: EXIT_CODES.FETCH_ERROR,
+  PARSE_ERROR: EXIT_CODES.PARSE_ERROR,
+};
+
+export function exitCodeForError(err: unknown): number {
+  if (err instanceof LinkedInScraperError) {
+    return EXIT_CODE_BY_ERROR[err.code] ?? EXIT_CODES.USAGE;
+  }
+  return EXIT_CODES.USAGE;
+}
+
 export function errorFromHttpStatus(status: number): LinkedInScraperError {
   if (status === 404) {
     return new ProfileNotFoundError(`LinkedIn profile not found (HTTP ${status})`);

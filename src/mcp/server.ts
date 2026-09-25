@@ -1,13 +1,22 @@
 #!/usr/bin/env node
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import scrapeProfile, { LinkedInScraperError } from "../index.js";
 
+export function readPackageVersion(): string {
+  const pkgPath = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "package.json");
+  const pkg = JSON.parse(readFileSync(pkgPath, "utf8")) as { version: string };
+  return pkg.version;
+}
+
 export function createServer(): McpServer {
   const server = new McpServer({
     name: "linkedin-scraper",
-    version: "2.0.0",
+    version: readPackageVersion(),
   });
 
   server.tool(
